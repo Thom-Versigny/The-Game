@@ -77,119 +77,8 @@ elif choice == 'd':
   print ("You repeated your fine.")
   crazy = 0
 
-while crazy <= 10:
-  if entities == 1:
-    print("You hear a weird sound. You walk futher into the rooms and the sound coming closer.")
-    print("When you come a round a corner you see a weird entity.")
-    choice = input("""What are you going to do?
-    A(Run away.
-    B(Walk towards to entity.
-    C(Do nothing: """).lower()
-    if choice == 'a':
-      print("You run as fast as you can.")
-      crazy += 1
-      entities = 0
-    elif choice == 'b':
-      print("You are walking towards to entity when you suddenly pas out, when you wake up you realize the entity is gone")
-      entities = random.randint(1, 10)
-      crazy += 3
-      entities = 0
-    elif choice == 'c':
-      print("You did nothing. You suddenly pas out, when you wake up you realize the entity is gone ")
-      crazy += 3
-      entities = 0
-    elif choice == 'd':
-      print ("You repeated your fine. But youre not and you runaway as fast as you can")
-      entities = 0
-  if entities == 3:
-    print("Your walking through the rooms when you see a weird entity.")
-    print("its hanging from the wall.")
-    choice = input("""What are you going to do?
-    A(Run away.
-    B(Walk towards to entity.
-    C(Do nothing: """).lower()
-    if choice == 'a':
-      print("You run as faraway from the entity.")
-      crazy += 1
-      entities = 0
-    elif choice == 'b':
-      print("You are walking towards to entity when suddenly the lights go out when the lights turned on again, you realize the entity is gone")
-      crazy += 3
-      entities = 0
-    elif choice == 'c':
-      print("You did nothing. suddenly the lights go out when the lights turned on again, you realize the entity is gone ")
-      crazy += 3
-      entities = 0
-    elif choice == 'd':
-      print ("You repeated your fine. But youre not and you runaway as fast as you can")
-      entities = 0
-  if entities == 5:
-    print("when you are walking through the rooms you see a window.")
-    print("You walk towards the window and see a weird figure.")
-    choice = input("""What are you going to do?
-    A(Run away.
-    B(Walk towards to figure.
-    C(Do nothing: """).lower()
-    if choice == 'a':
-      print("You run as fast as you can away from the window.")
-      crazy += 1
-      entities = 0
-    elif choice == 'b':
-      print("You are walking towards to figure when the window suddenly disapeared, you think its all in your head")
-      entities = random.randint(1, 10)
-      crazy += 2
-      entities = 0
-    elif choice == 'c':
-      print("You did nothing. when the window suddenly disapeared, you think its all in your head ")
-      crazy += 2
-      entities = 0
-    elif choice == 'd':
-      print ("You repeated your fine. But youre not and you runaway as fast as you can")
-      entities = 0
-  if entities == 7:
-    print("youre walking though the rooms when you see in the distance a weird entity.")
-    print("its to big for the room and its hands are no-clipping through the wall.")
-    choice = input("""What are you going to do?
-    A(Run away.
-    B(Walk towards to entity.
-    C(Do nothing: """).lower()
-    if choice == 'a':
-      print("You run as fast as you can away from the entity before it sees you.")
-      crazy += 1
-      entities = 0
-    elif choice == 'b':
-      print("You are walking towards to entity, but you realize the entity walks towards you.")
-      print("when the entity is a meter away from you it suddenly disapeared.")
-      crazy += 3
-      entities = 0
-    elif choice == 'c':
-      print("You did nothing. The entity sees you when it is a meter away from you it suddenly disapeared. ")
-      crazy += 3
-      entities = 0
-    elif choice == 'd':
-      print ("You repeated your fine. But youre not and you runaway as fast as you can")
-      entities = 0
-  if entities == 9:
-    print("You see a little spider in the corner in the room.")
-    choice = input("""What are you going to do?
-    A(walk away.
-    B(Walk towards to spider.
-    C(Do nothing: """).lower()
-    if choice == 'a':
-      print("You walk slowly away from the spider.")
-      entities = 0
-    elif choice == 'b':
-      print("You are walking towards to spider, when suddenly the wall is covered in spiders. You walk away")
-      crazy += 1
-      entities = 0
-    elif choice == 'c':
-      print("You did nothing. when suddenly the wall is covered in spiders. You walk away")
-      crazy += 1
-      entities = 0
-    elif choice == 'd':
-      print ("You repeated your fine. You walk away from the spiders")
-      crazy -= 1
-      entities = 0
+while crazy < 6:
+  print(f"Sanity Meter: {crazy}")
   if wayout == 5:
     print("You are walking through the rooms and you see a glitched wall.")
     print("You try to go through the wall with your hand but when it touched the wall it actualy when through")
@@ -266,3 +155,179 @@ while crazy <= 10:
     elif choice == 'd':
       print ("You repeated your fine.")
       crazy -= 1
+  elif crazy == 4:
+    choice = input("""What are you going to do?
+    A(Walk back.
+    B(Walk futher through the rooms.
+    C(Do nothing: """).lower()
+    if choice == 'a':
+      print("You walked back but it all looks the same.")
+      entities = random.randint(1, 10)
+      wayout = random.randint(1, 20)
+      crazy += 1
+    elif choice == 'b':
+      print("You walk room after room. It looks all the same")
+      entities = random.randint(1, 10)
+      wayout = random.randint(1, 20)
+      crazy += 1
+    elif choice == 'c':
+      print("You did nothing.")
+      crazy += 1
+    elif choice == 'd':
+      print ("You repeated your fine.")
+      crazy -= 1
+  elif crazy == 5:
+    choice = input("""What are you going to do?
+    A(.
+    B(Walk futher through the rooms.
+    C(Do nothing: """).lower()
+    if choice == 'a':
+      print("You rested a bit youre a bit calmer.")
+      crazy -= 1
+    elif choice == 'b':
+      print("You walk room after room. It looks different but all the same")
+      entities = random.randint(1, 10)
+      wayout = random.randint(1, 20)
+      crazy += 1
+    elif choice == 'c':
+      print("You did nothing.")
+      crazy += 1
+    elif choice == 'd':
+      print ("You repeated your fine.")
+      crazy -= 1
+  elif crazy == 6:
+    choice = input("""What are you going to do?
+    A(rest a bit.
+    B(Walk futher through the rooms.
+    C(Do nothing: """).lower()
+    if choice == 'a':
+      print("You rested a bit youre a bit calmer.")
+    elif choice == 'b':
+      print("You walk room after room. It looks all the same")
+      entities = random.randint(1, 10)
+      wayout = random.randint(1, 20)
+      crazy += 1
+    elif choice == 'c':
+      print("You did nothing.")
+      crazy += 1
+    elif choice == 'd':
+      print ("You repeated your fine.")
+      crazy -= 1
+  elif entities == 1:
+    print("You hear a weird sound. You walk futher into the rooms and the sound coming closer.")
+    print("When you come a round a corner you see a weird entity.")
+    choice = input("""What are you going to do?
+    A(Run away.
+    B(Walk towards to entity.
+    C(Do nothing: """).lower()
+    if choice == 'a':
+      print("You run as fast as you can.")
+      crazy += 1
+      entities = 0
+    elif choice == 'b':
+      print("You are walking towards to entity when you suddenly pas out, when you wake up you realize the entity is gone")
+      entities = random.randint(1, 10)
+      crazy += 3
+      entities = 0
+    elif choice == 'c':
+      print("You did nothing. You suddenly pas out, when you wake up you realize the entity is gone ")
+      crazy += 3
+      entities = 0
+    elif choice == 'd':
+      print ("You repeated your fine. But youre not and you runaway as fast as you can")
+      entities = 0
+  elif entities == 3:
+    print("Youre walking through the rooms when you see a weird entity.")
+    print("its hanging from the wall.")
+    choice = input("""What are you going to do?
+    A(Run away.
+    B(Walk towards to entity.
+    C(Do nothing: """).lower()
+    if choice == 'a':
+      print("You run as faraway from the entity.")
+      crazy += 1
+      entities = 0
+    elif choice == 'b':
+      print("You are walking towards to entity when suddenly the lights go out when the lights turned on again, you realize the entity is gone")
+      crazy += 3
+      entities = 0
+    elif choice == 'c':
+      print("You did nothing. suddenly the lights go out when the lights turned on again, you realize the entity is gone ")
+      crazy += 3
+      entities = 0
+    elif choice == 'd':
+      print ("You repeated your fine. But youre not and you runaway as fast as you can")
+      entities = 0
+  elif entities == 5:
+    print("when you are walking through the rooms you see a window.")
+    print("You walk towards the window and see a weird figure.")
+    choice = input("""What are you going to do?
+    A(Run away.
+    B(Walk towards to figure.
+    C(Do nothing: """).lower()
+    if choice == 'a':
+      print("You run as fast as you can away from the window.")
+      crazy += 1
+      entities = 0
+    elif choice == 'b':
+      print("You are walking towards to figure when the window suddenly disapeared, you think its all in your head")
+      entities = random.randint(1, 10)
+      crazy += 2
+      entities = 0
+    elif choice == 'c':
+      print("You did nothing. when the window suddenly disapeared, you think its all in your head ")
+      crazy += 2
+      entities = 0
+    elif choice == 'd':
+      print ("You repeated your fine. But youre not and you runaway as fast as you can")
+      entities = 0
+  elif entities == 7:
+    print("youre walking though the rooms when you see in the distance a weird entity.")
+    print("its to big for the room and its hands are no-clipping through the wall.")
+    choice = input("""What are you going to do?
+    A(Run away.
+    B(Walk towards to entity.
+    C(Do nothing: """).lower()
+    if choice == 'a':
+      print("You run as fast as you can away from the entity before it sees you.")
+      crazy += 1
+      entities = 0
+    elif choice == 'b':
+      print("You are walking towards to entity, but you realize the entity walks towards you.")
+      print("when the entity is a meter away from you it suddenly disapeared.")
+      crazy += 3
+      entities = 0
+    elif choice == 'c':
+      print("You did nothing. The entity sees you when it is a meter away from you it suddenly disapeared. ")
+      crazy += 3
+      entities = 0
+    elif choice == 'd':
+      print ("You repeated your fine. But youre not and you runaway as fast as you can")
+      entities = 0
+  elif entities == 9:
+    print("You see a little spider in the corner in the room.")
+    choice = input("""What are you going to do?
+    A(walk away.
+    B(Walk towards to spider.
+    C(Do nothing: """).lower()
+    if choice == 'a':
+      print("You walk slowly away from the spider.")
+      entities = 0
+    elif choice == 'b':
+      print("You are walking towards to spider, when suddenly the wall is covered in spiders. You walk away")
+      crazy += 1
+      entities = 0
+    elif choice == 'c':
+      print("You did nothing. when suddenly the wall is covered in spiders. You walk away")
+      crazy += 1
+      entities = 0
+    elif choice == 'd':
+      print ("You repeated your fine. You walk away from the spiders")
+      crazy -= 1
+      entities = 0
+
+if crazy == 30:
+  print("congratulations you escaped the backrooms")
+  input('press enter to exit')
+elif crazy > 30:
+  print("")
